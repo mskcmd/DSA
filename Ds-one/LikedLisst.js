@@ -107,7 +107,7 @@ while(curr.next){
   curr=curr.next;
 }
 curr.next=newNode
-  }
+  } 
 
   insertbigning(data){
 const newNode = new Node(data)
