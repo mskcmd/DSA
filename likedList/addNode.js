@@ -31,4 +31,7 @@ class likedList {
 
 const myList = new likedList();
 myList.addnode(10);
+myList.addnode(11);
+myList.addnode(12);
+myList.addnode(13);
 myList.print();

@@ -12,7 +12,7 @@ function search(arr,targat,leftIndex,rightIndex){
     }
 
     if(targat<arr[midileIndex]){
-        return search(arr,target,leftIndex,midileIndex-1)
+        return search(arr,targat,leftIndex,midileIndex-1)
     }else{
         return search(arr,targat,midileIndex+1,rightIndex)
     }
