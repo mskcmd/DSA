@@ -21,7 +21,7 @@ class Node {
     addnode(data) {
       const newNode = new Node(data);
       if (!this.head) {
-        this.head = newNode;
+        this.head = newNode;   
       } else {
         let curr = this.head;
         while (curr.next) {
