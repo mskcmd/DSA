@@ -20,6 +20,15 @@ class likedList {
       curr.next = newNode;
     }
   }
+  last(){
+    let curr=this.head;
+    let =sl
+    while(curr){
+      if(curr.next===null)
+       sl=curr.data;
+    }
+    return sl
+  }
   print() {
     let curr = this.head;
     while (curr) {
@@ -34,4 +43,5 @@ myList.addnode(10);
 myList.addnode(11);
 myList.addnode(12);
 myList.addnode(13);
+console.log(myList.last())
 myList.print();
