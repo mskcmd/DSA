@@ -4,7 +4,7 @@ function recursiveFactorial(n){
     }
     console.log(n);
     return n*recursiveFactorial(n-1)
-}
+} 
 
 let n=5
 
