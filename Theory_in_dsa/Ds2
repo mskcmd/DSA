@@ -1,0 +1,25 @@
+DS 2
+ > bubble sort O(n^2) 
+ > insertion sort O(n^2)
+ > selection sort O(n^2)
+ > quick sort O(nlog n),O(n^2)worst case
+ > merge sort O(nlog n)
+ > stack(lifo)
+ > queue(fifo)
+ > peek
+ > application of queue and stack
+ > stable and unstable 
+ > deterministic and non deterministic
+ > types of queue and stack
+ > satck underflow vs stack overflow
+ > divide and conquer strategy
+ > hashtable,application
+ > pros of LL using for stack and queue
+ > double ended queue
+ > hash fn,types
+ > hash value
+ > collision
+ > methods to prevent collission
+ > chaining,linear probing,quadratic,double hashing
+ > load factor
+ > array vs hashtable
