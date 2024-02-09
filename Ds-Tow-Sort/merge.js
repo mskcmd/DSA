@@ -14,7 +14,7 @@ function mergeSort(arr) {
   // Merge the sorted halves without using concat
   const mid = [];   
   let j = 0;
-
+   let i=0
   while (i < sortedLeft.length && j < sortedRight.length) {
     if (sortedLeft[i] < sortedRight[j]) {
       mid.push(sortedLeft[i]);

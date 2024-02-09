@@ -38,4 +38,4 @@ function Qsort(arr){
     return [...Qsort(l),p,...Qsort(r)]
 }
 const arr1 = [8,5,6,9,7,1,3,2]
-console.log(Qsort(arr1)) // [-6, -2, 4, 8, 20]
+console.log(Qsort(arr1)) 

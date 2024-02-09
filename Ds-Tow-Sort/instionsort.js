@@ -11,3 +11,4 @@ function insrtionSort(arr){
 return arr
 }
 console.log(insrtionSort([5,4,3,2,1]))
+
