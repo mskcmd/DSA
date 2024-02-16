@@ -24,7 +24,7 @@ class HashTable{
           bucket.push([key,value])
         }
       }
-    }
+    } 
     get(key){
       const index=this.hash(key)
       // return this.table[index]
