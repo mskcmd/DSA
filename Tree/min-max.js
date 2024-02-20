@@ -5,7 +5,8 @@ class Node {
     this.right = null;
   }
 }
-class bsTree {
+
+class Tree {
   constructor() {
     this.root = null;
   }
@@ -35,32 +36,40 @@ class bsTree {
       }
     }
   }
-  search(root, value) {
-    if (!root) {
-      return false;
-    } else {
-      if (root.value === value) {
-        return true;
-      } else if (value < root.value) {
-        return this.search(root.left, value);
-      } else {
-        return this.search(root.right, value);
+  LevelOder() {
+    const queue = [];
+    queue.push(this.root);
+    while (queue.length) {
+      const curr = queue.shift();
+      console.log(curr.value);
+      if (curr.left) {
+        queue.push(curr.left);
+      }
+      if (curr.right) {
+        queue.push(curr.right);
       }
     }
   }
+  min(root) {
+    if (!root.left) {
+      return root.value;
+    } else {
+      return this.min(root.left);
+    }
+  }
+  max(root) {
+    if (!root.right) {
+      return root.value;
+    } else {
+      return this.max(root.right);
+    }
+  }
 }
-const bst = new bsTree();
-console.log("is empty ? ", bst.isEmpty());
 
-bst.insert(10);
-bst.insert(5);
-bst.insert(15);
-bst.insert(3);
-bst.insert(7);
-
-console.log(bst.search(bst.root, 10));
-console.log(bst.search(bst.root, 5));
-console.log(bst.search(bst.root, 15));
-console.log(bst.search(bst.root, 3));
-console.log(bst.search(bst.root, 7));
-console.log(bst.search(bst.root, 54));
+const bts = new Tree();
+bts.insert(10);
+bts.insert(11);
+bts.insert(12);
+bts.insert(13);
+console.log(bts.min(bts.root));
+console.log(bts.max(bts.root));
