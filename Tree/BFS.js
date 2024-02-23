@@ -62,6 +62,7 @@ class Node {
         }
       }
     }
+    
   }
   const bst = new bsTree();
   // console.log("is empty ? ", bst.isEmpty());
