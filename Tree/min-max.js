@@ -59,7 +59,7 @@ class Tree {
   }
   max(root) {
     if (!root.right) {
-      return root.value;
+      return root.value;  
     } else {
       return this.max(root.right);
     }
