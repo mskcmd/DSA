@@ -1,0 +1,73 @@
+**HASHTABLE**
+
+A hash table is a data structure that allows you to store and retrieve values based on a key. It uses a hash function to map keys to indexes in an array. This mapping allows for efficient retrieval of values, as you can quickly locate the index associated with a given key. Hash tables are commonly used for implementing associative arrays, sets, and caches in computer programs, providing fast access to data by minimizing the time complexity of key-based operations.
+
+**Hash Fn**
+
+A hash function is a mathematical function that takes an input (or 'message') and produces a fixed-size string of characters, which is typically a hash code or hash value
+
+**Load factor**
+
+The load factor of a hash table is like checking how full or crowded it is. It helps us understand the ratio of stored elements to the total available slots in the hash table
+
+It helps to assess the efficiency of the hash table and is used to determine when to resize the table to maintain an optimal balance between space usage and minimizing collisions.
+
+# Applications of Hash Tables:
+
+- Hash tables are frequently used for indexing and searching massive volumes of data. A search engine might use a hash table to store the web pages that it has indexed.
+- Data is usually cached in memory via hash tables, enabling rapid access to frequently used information.
+- Hash functions are frequently used in cryptography to create digital signatures, validate data, and guarantee data integrity.
+- Hash tables can be used for implementing database indexes, enabling fast access to data based on key values
+
+# Complexity Analysis of a Hash Table:
+
+For lookup, insertion, and deletion operations, hash tables have an average-case time complexity of O(1). Yet, these operations may, in the worst case, require O(n) time.
+
+**Collisions**
+
+Collisions happen when two or more keys point to the same array index. Chaining, open addressing, and double hashing are a few techniques for resolving collisions.
+
+• **[Open addressing](https://www.geeksforgeeks.org/open-addressing-collision-handling-technique-in-hashing/):** collisions are handled by looking for the following empty space in the table. If the first slot is already taken, the hash function is applied to the subsequent slots until one is left empty. There are various ways to use this approach, including double-hashing, linear probing, and quadratic probing.
+
+Here are a few reasons why linked lists are used in hash tables:
+
+When a collision happens, a linked list helps manage multiple key-value pairs associated with the same hash index.
+
+1. **Collision Resolution:**
+    - When two keys hash to the same index, a linked list provides a way to store multiple key-value pairs at that index, creating a chain of elements.
+2. **Dynamic Size:**
+    - Linked lists allow for a dynamic number of elements in each bucket. As new key-value pairs are added, they can be appended to the linked list without the need for resizing or rehashing the entire table.
+3. **Memory Efficiency:**
+    - Linked lists are memory-efficient for handling collisions. They allow for flexibility in storing an arbitrary number of elements at a specific hash index without needing a fixed-size array.
+4. **Easy Implementation:**
+    - Linked lists are relatively easy to implement and understand. Each node in the linked list can store a key-value pair, and the linked structure helps manage the elements efficiently.
+
+**`array vs hashtable`**
+
+Arrays and hashtables are both fundamental data structures used in programming, but they have distinct characteristics and are suited for different purposes.
+
+**Structure:**
+
+- **Array:** Stores elements in a contiguous sequence, accessed using numerical indexes (0, 1, 2, etc.).
+- **Hashtable:** Stores key-value pairs, where each key maps to a specific value.
+
+**Access:**
+
+- **Array:** Accessing elements is fast when you know the exact index (O(1) time complexity). However, finding an element by its value requires iterating through the entire array (O(n) time complexity).
+- **Hashtable:** Accessing elements by their keys is very fast (O(1) time complexity), thanks to the hashing function that maps keys to specific locations. But accessing elements by value is generally not possible.
+- 
+
+**Size:**
+
+- **Array:** Has a fixed size predetermined at creation. Resizing usually involves creating a new array and copying elements, which can be expensive.
+- **Hashtable:** dynamically resizes as needed, making it more flexible but introducing some overhead for managing memory allocation.
+
+**Duplicates:**
+
+- **Array:** Can store duplicate elements.
+- **Hashtable:** Typically, it doesn't allow duplicate keys (although some implementations might).
+
+**Use cases:**
+
+- **Array:** Ideal for storing ordered data accessed by index, like numerical lists, coordinates, or game levels.
+- **Hashtable:** Perfect for fast lookups by key, like user profiles, dictionaries, caching, or implementing sets.
